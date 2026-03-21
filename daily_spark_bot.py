@@ -77,8 +77,9 @@ logger = logging.getLogger(__name__)
 # CONFIG (edit these if anything changes)
 # ─────────────────────────────────────────────────────────────────────────────
 CHANNEL = "water-cooler-chats"                        # without the #
+CHANNEL_ID = "C0101T8N9C0"                            # Slack ID for #water-cooler-chats
 SHOUTOUT_CHANNEL = "team-principle-shoutout-wall-of-light"
-SHOUTOUT_CHANNEL_ID = "C08QCQJ8S0Z"
+SHOUTOUT_CHANNEL_ID = "C08QCQJ8S0Z"                  # Slack ID for #team-principle-shoutout-wall-of-light
 POST_HOUR = 9
 POST_MINUTE = 15
 TIMEZONE = pytz.timezone("America/Denver")            # Mountain Time
@@ -444,13 +445,7 @@ def post_daily_message():
         logger.info("Weekend — skipping post.")
         return
 
-    channel_id = _channel_ids.get(CHANNEL)
-    if not channel_id:
-        channel_id = get_channel_id(CHANNEL)
-        if not channel_id:
-            logger.error(f"Cannot post: channel #{CHANNEL} not found.")
-            return
-        _channel_ids[CHANNEL] = channel_id
+    channel_id = CHANNEL_ID
 
     message = DAY_BUILDERS[weekday]()
 
@@ -486,10 +481,7 @@ def post_daily_message():
 
 def send_launch_message():
     """Posts the one-time intro message. Called with --launch flag."""
-    channel_id = _channel_ids.get(CHANNEL) or get_channel_id(CHANNEL)
-    if not channel_id:
-        logger.error(f"Cannot send launch message: channel #{CHANNEL} not found.")
-        return
+    channel_id = CHANNEL_ID
     try:
         app.client.chat_postMessage(
             channel=channel_id,
@@ -585,7 +577,7 @@ if __name__ == "__main__":
     import sys
 
     logger.info("The Daily Spark ⚡ — starting up...")
-    resolve_channels()
+    logger.info(f"Posting to #{CHANNEL} ({CHANNEL_ID}) | Shoutouts → #{SHOUTOUT_CHANNEL} ({SHOUTOUT_CHANNEL_ID})")
 
     # --launch: send the one-time intro message, then continue running
     if "--launch" in sys.argv:
