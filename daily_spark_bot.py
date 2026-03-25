@@ -103,125 +103,139 @@ one_word_threads: dict[str, datetime] = {}
 # ── MONDAY — Gratitude & Energy ──────────────────────────────────────────────
 # Team Principles: Take care of our team · Amplifying Light
 MONDAY_QUESTIONS = [
-    "What's one thing you're grateful for today?",
-    "One small win from this week — share it.",
-    "Someone who made your job easier recently — who deserves a nod?",
-    "Something that went better than expected this week.",
-    "One thing you're proud of this week.",
-    "A small moment that made you smile recently.",
-    "One thing you'd thank your past self for.",
-    "One thing you appreciate about this team.",
-    "A win that might go unnoticed — let's spotlight it.",
-    "Something outside work you're grateful for.",
-    "One challenge you're grateful for because it helped you grow.",
-    "Someone you want to recognize today — tag them.",
+    # Take care of our team — reflection
+    "Our principle is *Take care of our team.* Who on this team made your week better — and what did they do?",
+    "We believe in *taking care of our team.* What's one thing a teammate did recently that you want to recognize?",
+    "*Take care of our team* — what's one small way you looked out for someone at work this week?",
+    "Our principle says *take care of our team.* What's something a colleague does that makes your job easier? Tell them!",
+    "*Take care of our team* — who's been quietly showing up and deserves a spotlight today?",
+    "We practice *taking care of our team.* What's one thing you appreciate about how this team supports each other?",
+    # Take care of our team — action
+    "*Take care of our team* challenge: send a quick message to someone today just to say thanks. Come back and tell us who!",
+    "Our principle is *take care of our team.* Your mission today: do one small thing to make a teammate's day easier. Report back!",
+    # Amplifying Light — reflection
+    "We're here to *Amplify Light.* What's one moment this week where you saw someone on this team shine?",
+    "*Amplifying Light* — what's something you're grateful for that reminds you why this work matters?",
+    "Our principle is *Amplifying Light.* What's one way your work this week created something positive for someone else?",
+    "*Amplifying Light* starts with gratitude. What's one thing — big or small — that you're thankful for today?",
+    # Amplifying Light — action
+    "*Amplify Light* challenge: tag someone in the thread and tell them one specific thing they do that makes this team better.",
+    "We believe in *Amplifying Light.* Share one win from this week — yours or someone else's — and let's celebrate it together.",
 ]
 
 # ── TUESDAY — Fun & Light ────────────────────────────────────────────────────
 # Team Principle: Execute with high energy
 TUESDAY_QUESTIONS = [
-    "If your job had a smell, what would it be?",
-    "What's your 'this meeting could've been an email' face?",
-    "If your role had a mascot, what would it be?",
-    "If your brain had too many tabs open right now, what are they?",
-    "What's your go-to recharge when you need a mental reset?",
-    "If your Slack status could be hilariously honest, what would it say?",
-    "If your week were a meme, what would it be?",
-    "What would your warning label say today?",
-    "If your job turned into a video game, what's the hardest level?",
-    "What's your most unnecessary workplace talent?",
-    "If your to-do list could talk, what would it yell?",
-    "If your email inbox had a personality, what would it be?",
-    "If you could rename Mondays, what would you call them?",
-    "If your job was a reality show, what would it be called?",
-    "If your laptop could talk, what would it complain about?",
-    "If you had to give a TED Talk right now, what topic could you fake?",
+    # Execute with high energy — fun reflection
+    "Our principle is *Execute with high energy.* If your energy today were a song, what would be playing?",
+    "*Execute with high energy* — what's the thing that gets you most fired up at work? (Bonus points if it's weird.)",
+    "We believe in *executing with high energy.* What does your 'high energy mode' actually look like? Describe it.",
+    "*Execute with high energy* — what's your secret weapon for bringing the energy when you're running on fumes?",
+    "Our principle says *execute with high energy.* If your energy level right now were a weather forecast, what is it?",
+    "*Execute with high energy* — what's one thing that always hypes you up before a big task?",
+    "We *execute with high energy.* What's the most energetic thing you've done at work this week? (Low bar counts.)",
+    "*Execute with high energy* — if your work energy were a mascot, what animal would it be today?",
+    # Execute with high energy — fun action
+    "*Execute with high energy* challenge: pick your most boring task today and do it with ridiculous enthusiasm. Report back.",
+    "Our principle is *execute with high energy.* Your mission: hype up the next person who posts in this thread.",
+    "*Execute with high energy* — drop your go-to pump-up song in the thread. Let's build a team playlist!",
+    "We *execute with high energy.* Share one thing you do to recharge so you can keep bringing it every day.",
+    "*Execute with high energy* — what's something you crushed this week because you brought the energy?",
+    "Our principle is *execute with high energy.* Rate your energy right now 1-10 and tell us what would bump it up one notch.",
 ]
 
 # ── WEDNESDAY — Scenarios & Thinking ────────────────────────────────────────
 # Team Principles: Take ownership · Test everything
 WEDNESDAY_QUESTIONS = [
-    "You wake up and your biggest work problem is solved — what changed?",
-    "You get to shadow your future self — what are they doing differently?",
-    "You can automate one part of your job — what disappears?",
-    "A new tool instantly improves your workflow — what is it?",
-    "You're told to simplify your role by 50% — what stays?",
-    "Your workload doubles — what do you stop doing first?",
-    "You're mentoring someone new — what advice do you give first?",
-    "You have to teach your role in 10 minutes — what do you focus on?",
-    "You get a redo on yesterday — what do you change?",
-    "You inherit someone else's role — what's your first move?",
-    "You're asked to improve one team habit — what do you pick?",
-    "A new hire asks what actually matters — what do you say?",
-    "You challenge one assumption your team holds — what do you test first?",
-    "You run an experiment on your current workflow — what do you try?",
-    "You're asked to prove something you assumed was true — what do you discover?",
+    # Take ownership — reflection
+    "Our principle is *Take ownership.* What's something in your work right now that you've fully claimed as yours — no one had to ask you?",
+    "*Take ownership* — think about yesterday. Was there a moment you could've stepped up but held back? What would you do differently?",
+    "We believe in *taking ownership.* What's one thing on your plate that would fall through the cracks if you didn't own it?",
+    "*Take ownership* — what's a problem you noticed and fixed before anyone else even flagged it?",
+    "Our principle says *take ownership.* If a new person shadowed you, what would they learn about what 'owning it' looks like?",
+    "*Take ownership* — what's something outside your official role that you've chosen to care about anyway?",
+    # Take ownership — action
+    "*Take ownership* challenge: what's one thing that's been sitting unfinished that you'll commit to closing out today?",
+    "We practice *taking ownership.* Name one thing you're going to own this week that you've been waiting on someone else for.",
+    # Test everything — reflection
+    "Our principle is *Test everything.* What's one assumption in your workflow that you've never actually validated?",
+    "*Test everything* — what's something your team does 'because we always have' that might be worth questioning?",
+    "We believe in *testing everything.* What's the last thing you tried a different way — and what did you learn?",
+    "*Test everything* — if you could run one experiment on how your team works, what would you test?",
+    "Our principle says *test everything.* What's a 'best practice' you followed that turned out to be wrong?",
+    # Test everything — action
+    "*Test everything* challenge: pick one thing you do on autopilot and try it a completely different way today. Tell us what happens.",
+    "We *test everything.* What's one small experiment you could run this week to make your work better?",
 ]
 
-# ── THURSDAY POOL A — Perspective & Growth ───────────────────────────────────
-# Team Principles: Hunger to learn · Candor · Better solutions
-THURSDAY_PERSPECTIVE_QUESTIONS = [
-    "What's something that feels hard now but will matter later?",
-    "What's one thing you've gotten better at recently?",
-    "What's something you used to overcomplicate?",
-    "What's one thing you wish people understood about your role?",
-    "What's something that saves you time every week?",
-    "What's something you've learned from a mistake recently?",
-    "What's a small improvement that made a big difference?",
-    "What are you intentionally setting aside right now — and why?",
-    "What helps you stay focused when things get chaotic?",
-    "What gives you energy at work?",
-    "What's one assumption you've challenged recently?",
-    "What's one thing you'd do differently if you started fresh today?",
+# ── THURSDAY POOL A — Hunger to Learn ────────────────────────────────────────
+# Team Principle: Hunger to learn
+THURSDAY_LEARN_QUESTIONS = [
+    # Hunger to learn — reflection
+    "Our principle is *Hunger to learn.* What's something you learned this week — from work, a conversation, a mistake, anything?",
+    "*Hunger to learn* — what's a skill or topic you've been curious about but haven't made time for yet?",
+    "We believe in a *hunger to learn.* What's the last thing that changed your mind about how you do your job?",
+    "*Hunger to learn* — who on this team (or outside it) has taught you something recently? What was it?",
+    "Our principle says *hunger to learn.* What's something that feels hard right now because you're still learning it?",
+    "*Hunger to learn* — what's one thing you know now that you wish you'd learned sooner?",
+    # Hunger to learn — action
+    "*Hunger to learn* challenge: ask someone on the team to teach you one thing about their role today. Report back!",
+    "We have a *hunger to learn.* Share one resource — article, tool, podcast, anything — that helped you get better at your work.",
+    "*Hunger to learn* — what's one thing you're going to intentionally learn or get better at this month?",
 ]
 
-# ── THURSDAY POOL B — Role Flip Edition ─────────────────────────────────────
-# Team Principles: Hunger to learn · Candor · Better solutions
-THURSDAY_ROLEFLIP_QUESTIONS = [
-    "What does your future self wish you'd start doing now?",
-    "What does your past self thank you for?",
-    "If you were your manager, what feedback would you give yourself?",
-    "What would a customer say about your work this week?",
-    "What does another team depend on you for most?",
-    "If you were onboarding yourself, what would confuse you?",
-    "What's something leadership might not see that matters?",
-    "What would your replacement need to know on day one?",
-    "If you swapped roles with someone here, what would surprise you?",
+# ── THURSDAY POOL B — Candor ────────────────────────────────────────────────
+# Team Principle: Candor
+THURSDAY_CANDOR_QUESTIONS = [
+    # Candor — reflection
+    "Our principle is *Candor.* What's something you wish more people would just say out loud at work?",
+    "*Candor* means being honest even when it's uncomfortable. When's the last time someone's directness actually helped you?",
+    "We practice *candor.* What's one thing you've been thinking about your work that you haven't said yet?",
+    "*Candor* — what does honest feedback look like when it's done well? Share an example you've seen.",
+    "Our principle says *candor.* What makes it easier for you to be honest with your team?",
+    "*Candor* — what's one question you wish someone would ask you about your work?",
+    # Candor — action
+    "*Candor* challenge: give someone in this thread a genuine, specific compliment about their work. Be real, not generic.",
+    "We believe in *candor.* Share one honest take on something your team could do better — no sugarcoating needed.",
+    "*Candor* challenge: what's one thing you want to be more upfront about going forward?",
 ]
 
-# ── THURSDAY POOL C — Future Focus ──────────────────────────────────────────
-# Team Principles: Hunger to learn · Candor · Better solutions
-THURSDAY_PREDICTION_QUESTIONS = [
-    "Will today feel long or short — what's your gut say?",
-    "Will your top task get done before noon? What would make that happen?",
-    "Will something unexpected come up today — and will it lead somewhere good?",
-    "Will next week be more or less intense? What does that tell you?",
-    "Will your energy go up or down by end of day? What would shift it?",
-    "Will you lean into 'yes' or 'no' more today — which do you actually need?",
-    "Will this week feel successful? What one thing would make it so?",
-    "Will something you're worried about right now matter in 30 days?",
-    "What's one thing you could do differently tomorrow to get a better outcome?",
-    "What's one small bet you could place on a better solution this week?",
+# ── THURSDAY POOL C — Better Solutions ───────────────────────────────────────
+# Team Principle: Better solutions
+THURSDAY_SOLUTIONS_QUESTIONS = [
+    # Better solutions — reflection
+    "Our principle is *Better solutions.* What's a problem you solved recently by trying a different approach?",
+    "*Better solutions* — what's something your team does that works fine but could probably work *better*?",
+    "We pursue *better solutions.* What's the most creative workaround you've come up with at work?",
+    "*Better solutions* — when you're stuck, what's your go-to method for finding a new angle?",
+    "Our principle says *better solutions.* What's one process you've improved that you're proud of?",
+    "*Better solutions* — what's a tool, trick, or shortcut you use that other people might not know about? Share it!",
+    # Better solutions — action
+    "*Better solutions* challenge: pick one thing you did this week and brainstorm a way to do it 10% better next time.",
+    "We chase *better solutions.* What's one small improvement you could suggest for how the team works?",
+    "*Better solutions* — what's one problem you'd love fresh eyes on? Drop it in the thread and let's think together.",
 ]
 
 # Thursday pools: (display_name, question_list)
 THURSDAY_POOLS = [
-    ("Perspective & Growth", THURSDAY_PERSPECTIVE_QUESTIONS),
-    ("Role Flip Edition",    THURSDAY_ROLEFLIP_QUESTIONS),
-    ("Future Focus",         THURSDAY_PREDICTION_QUESTIONS),
+    ("Hunger to Learn",   THURSDAY_LEARN_QUESTIONS),
+    ("Candor",            THURSDAY_CANDOR_QUESTIONS),
+    ("Better Solutions",  THURSDAY_SOLUTIONS_QUESTIONS),
 ]
 
 # ── FRIDAY — Team Reflection & Alignment ─────────────────────────────────────
 # Team Principles: Share context · Align to North Star
 FRIDAY_QUESTIONS = [
-    "Build a sentence about this week — one word per person in the thread.",
-    "One word each: describe this week.",
-    "Build a headline for the week — one word per person.",
-    '"This team is…" — one word each.',
-    "Build a mission statement — one word per person, go.",
-    "Describe our current challenge in one word each.",
-    "Build a picture of a perfect day at work — one word each.",
-    "One word each: what we need more of.",
+    # Share context
+    "Our principle is *Share context.* In one word each, what was the theme of your week? Build the sentence together!",
+    "*Share context* — one word per person: what's the most important thing your team should know going into next week?",
+    "We believe in *sharing context.* One word each: what did you learn this week?",
+    "*Share context* — one word per person: what was the vibe on your team this week?",
+    # Align to North Star
+    "Our principle is *Align to North Star.* One word each: what are we building toward?",
+    "*Align to North Star* — one word per person: what keeps you focused on what matters?",
+    "We *align to our North Star.* One word each: what does success look like for this team?",
+    "*Align to North Star* — one word per person: what should we carry into next week?",
 ]
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -282,7 +296,8 @@ def build_monday_message() -> dict:
         "blocks": [
             _header("The Daily Spark | Monday — Gratitude & Energy"),
             _divider(),
-            _section(f"*Today's Spark:*\n\n{q}\n\n_Drop your answer in the thread._"),
+            _context("*Principles:*  Take care of our team  ·  Amplifying Light"),
+            _section(f"\n{q}\n\n_Drop your answer in the thread!_"),
             _divider(),
             _section(f"Give someone a shoutout in <#{SHOUTOUT_CHANNEL_ID}> — let them know they're seen."),
         ]
@@ -295,7 +310,8 @@ def build_tuesday_message() -> dict:
         "blocks": [
             _header("The Daily Spark | Tuesday — Fun & Light"),
             _divider(),
-            _section(f"*Today's Spark:*\n\n{q}\n\n_Drop your answer in the thread._"),
+            _context("*Principle:*  Execute with high energy"),
+            _section(f"\n{q}\n\n_Drop your answer in the thread!_"),
         ]
     }
 
@@ -306,7 +322,8 @@ def build_wednesday_message() -> dict:
         "blocks": [
             _header("The Daily Spark | Wednesday — Scenarios & Thinking"),
             _divider(),
-            _section(f"*Today's Spark:*\n\n{q}\n\n_Drop your answer in the thread._"),
+            _context("*Principles:*  Take ownership  ·  Test everything"),
+            _section(f"\n{q}\n\n_Drop your answer in the thread!_"),
         ]
     }
 
@@ -318,7 +335,8 @@ def build_thursday_message() -> dict:
         "blocks": [
             _header(f"The Daily Spark | Thursday — {pool_name}"),
             _divider(),
-            _section(f"*Today's Spark:*\n\n{q}\n\n_Drop your answer in the thread._"),
+            _context(f"*Principle:*  {pool_name}"),
+            _section(f"\n{q}\n\n_Drop your answer in the thread!_"),
         ]
     }
 
@@ -329,8 +347,9 @@ def build_friday_message() -> dict:
         "blocks": [
             _header("The Daily Spark | Friday — Team Reflection"),
             _divider(),
+            _context("*Principles:*  Share context  ·  Align to North Star"),
             _section(
-                f"*Today's Spark:*\n\n{q}\n\n"
+                f"\n{q}\n\n"
                 "_One word per person in the thread. The bot is watching._ 👀"
             ),
             _divider(),
