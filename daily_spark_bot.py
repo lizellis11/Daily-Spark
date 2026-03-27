@@ -446,6 +446,37 @@ DAY_BUILDERS = {
 }
 
 
+def already_posted_today() -> bool:
+    """Check if the bot already posted a Daily Spark message in the channel today."""
+    now = datetime.now(TIMEZONE)
+    # Start of today in UTC epoch (what Slack expects for oldest/latest)
+    start_of_day = now.replace(hour=0, minute=0, second=0, microsecond=0)
+    oldest_ts = str(start_of_day.timestamp())
+
+    try:
+        result = app.client.conversations_history(
+            channel=CHANNEL_ID,
+            oldest=oldest_ts,
+            limit=20,
+        )
+        for msg in result.get("messages", []):
+            # Look for bot messages with our header pattern
+            for block in msg.get("blocks", []):
+                if block.get("type") == "header":
+                    header_text = block.get("text", {}).get("text", "")
+                    if header_text.startswith("The Daily Spark |"):
+                        logger.info(
+                            f"Already posted today (ts={msg['ts']}). Skipping duplicate."
+                        )
+                        return True
+    except Exception as e:
+        logger.warning(f"Could not check for duplicate post: {e}")
+        # If we can't check, allow the post rather than silently skipping
+        return False
+
+    return False
+
+
 def post_daily_message():
     """Called by the scheduler. Posts the appropriate message for the current weekday."""
     now = datetime.now(TIMEZONE)
@@ -453,6 +484,9 @@ def post_daily_message():
 
     if weekday > 4:
         logger.info("Weekend — skipping post.")
+        return
+
+    if already_posted_today():
         return
 
     channel_id = CHANNEL_ID
