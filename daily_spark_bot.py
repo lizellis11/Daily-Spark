@@ -437,15 +437,6 @@ def resolve_channels():
 # POSTING LOGIC
 # ─────────────────────────────────────────────────────────────────────────────
 
-# Maps Slack emoji reaction names to each weekday
-DAY_REACTIONS = {
-    0: ["pray", "heart", "raised_hands"],       # Monday
-    1: ["joy", "fire", "bulb"],                 # Tuesday
-    2: ["thinking_face", "bulb", "fire"],       # Wednesday
-    3: ["bulb", "seedling", "fire"],            # Thursday
-    4: ["raised_hands", "bricks", "dart"],      # Friday
-}
-
 DAY_BUILDERS = {
     0: build_monday_message,
     1: build_tuesday_message,
@@ -476,17 +467,6 @@ def post_daily_message():
         )
         thread_ts = result["ts"]
         logger.info(f"Posted Daily Spark for weekday={weekday}, ts={thread_ts}")
-
-        # Add emoji reactions so people can "react-vote" without typing
-        for reaction in DAY_REACTIONS.get(weekday, []):
-            try:
-                app.client.reactions_add(
-                    channel=channel_id,
-                    timestamp=thread_ts,
-                    name=reaction,
-                )
-            except Exception:
-                pass  # Non-critical — bot may have already reacted
 
         # Track Friday threads for one-word enforcement (expires after 10 hours)
         if weekday == 4:
