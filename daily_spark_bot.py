@@ -76,6 +76,9 @@ logger = logging.getLogger(__name__)
 # ─────────────────────────────────────────────────────────────────────────────
 # CONFIG (edit these if anything changes)
 # ─────────────────────────────────────────────────────────────────────────────
+# Kill-switch — set to False to pause daily posting. Flip to True to resume.
+POSTING_ENABLED = False
+
 CHANNEL = "water-cooler-chats"                        # without the #
 CHANNEL_ID = "C0101T8N9C0"                            # Slack ID for #water-cooler-chats
 SHOUTOUT_CHANNEL = "team-principle-shoutout-wall-of-light"
@@ -479,6 +482,10 @@ def already_posted_today() -> bool:
 
 def post_daily_message():
     """Called by the scheduler. Posts the appropriate message for the current weekday."""
+    if not POSTING_ENABLED:
+        logger.info("POSTING_ENABLED is False — skipping daily post.")
+        return
+
     now = datetime.now(TIMEZONE)
     weekday = now.weekday()  # 0 = Monday … 4 = Friday
 
